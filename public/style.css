@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#form_crud{
+    background-color: rgb(168, 168, 168);
+    display: block;
+    padding: 30px 40px;
+    border-radius: 10px;
+
+}
+
+input, label, button, select, textarea{
+    display: flex;
+    flex-direction: row;
+   width: 100%;
+   
+}
+
+#form_busca{
+    margin-top: 30px;
+    background-color: rgb(98, 148, 255);
+    display: block;
+    padding: 20px 40px;
+    border-radius: 10px;
+    gap: 7px;
+}
+h1{
+    margin: 0%;
+    padding: 0%;
+}
+button{
+    text-align: center;
+    margin-top: 5px;
+
+}

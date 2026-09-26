@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado SAEP Prático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+
+        
+        <form id="form_crud">
+            <h1 id="titulo_form">Cadastro de Equipamentos</h1>
+            
+            
+            <input type="hidden" id="equip_id_edit">
+
+            <label for="nome">Nome do Equipamento</label>
+            <input type="text" placeholder="Equipamento" id="nome">
+
+            <label for="tipo">Tipo do Equipamento</label>
+            <input type="text" placeholder="Tipo" id="tipo">
+
+            <label for="marca">Marca do Equipamento</label>
+            <input type="text" placeholder="Marca do Equipamento" id="marca">
+
+            <label for="problema">Problema Relatado</label>
+            <textarea name="problema" id="problema"></textarea>
+
+            <label for="status">Status</label>
+            <select id="status">
+                <option value="Em_analise">Em analise</option>
+                <option value="Em_manutenção">Em manutenção</option>
+                <option value="Finalizado">Finalizado</option>
+            </select>
+
+            <button id="btn_cadastro" type="button" onclick="salvarEquipamento()">Cadastrar</button>
+            <button id="btn_cancelar" type="button" onclick="limparFormulario()" style="display:none;">Cancelar Edição</button>
+        </form>
+
+  
+        <form id="form_busca">
+            <h1>Equipamentos cadastrados</h1>
+
+            <label for="id">Digite o ID do equipamento (deixe em branco para listar todos)</label>
+            <input type="number" id="id">
+
+            <button id="btn_busca" type="button" onclick="buscarEquipamento()">Buscar</button>
+            <button type="button" onclick="atualizarTela()">Listar Todos</button>
+
+            <div id="equipa_cadastrado"></div>
+        </form>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
