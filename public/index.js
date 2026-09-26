@@ -14,6 +14,7 @@ async function salvarEquipamento() {
     const idEdit = equip_id_edit.value;
 
     if (!equip_nome.value.trim()) {
+
         alert("Preencha o nome do equipamento.");
         return;
     }
@@ -27,6 +28,7 @@ async function salvarEquipamento() {
     };
 
     const url = idEdit ? `/equipamentos/${idEdit}` : "/equipamentos";
+
     const metodo = idEdit ? "PUT" : "POST";
 
     const resposta = await fetch(url, {
@@ -44,11 +46,14 @@ async function salvarEquipamento() {
     atualizarTela();
 }
 
+
+
 async function buscarEquipamento() {
     const idBusca = input_id_busca.value.trim();
 
     if (!idBusca) {
         atualizarTela();
+        
         return;
     }
 
@@ -62,6 +67,10 @@ async function buscarEquipamento() {
     const equipamento = await resposta.json();
     renderizarLista([equipamento]);
 }
+
+
+
+
 
 async function carregarParaEdicao(id) {
     const resposta = await fetch(`/equipamentos/${id}`);
